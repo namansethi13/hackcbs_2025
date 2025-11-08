@@ -62,6 +62,8 @@ exports.createOrganization = async (req, res) => {
   const { name } = req.body;
   const ownerId = req.user.id;
 
+  console.log('Creating organization:', { name, ownerId });
+
   if (!name) {
     return res.status(400).json({ error: 'Organization name is required' });
   }
@@ -86,6 +88,8 @@ exports.createOrganization = async (req, res) => {
       return org;
     });
 
+    console.log('Organization created successfully:', result);
+
     res.status(201).json({
       org: {
         id: result.id,
@@ -95,7 +99,11 @@ exports.createOrganization = async (req, res) => {
       }
     });
   } catch (error) {
-    res.status(500).json({ error: 'Could not create organization' });
+    console.error('Error creating organization:', error);
+    res.status(500).json({
+      error: 'Could not create organization',
+      details: error.message
+    });
   }
 };
 

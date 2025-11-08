@@ -1,54 +1,46 @@
-const { expressjwt: jwt } = require('express-jwt');
-const jwks = require('jwks-rsa');
+
+const jwt = require('jsonwebtoken');
 const prisma = require('../prismaClient');
 
-const checkJwt = jwt({
-  secret: jwks.expressJwtSecret({
-    cache: true,
-    rateLimit: true,
-    jwksRequestsPerMinute: 5,
-    jwksUri: `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`
-  }),
-  audience: process.env.AUTH0_AUDIENCE,
-  issuer: `https://${process.env.AUTH0_DOMAIN}/`,
-  algorithms: ['RS256']
-});
-const syncUserWithDb = async (req, res, next) => {
-  try {
-    const auth0Id = req.auth.sub; // Auth0 user ID (e.g., "auth0|123456")
-    const email = req.auth.email || req.auth[`${process.env.AUTH0_AUDIENCE}/email`];
-    const name = req.auth.name || req.auth[`${process.env.AUTH0_AUDIENCE}/name`];
+const authMiddleware = async (req, res, next) => {
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    console.log('Auth failed: No token provided');
+    return res.status(401).json({
+      error: "Unauthorized: No Token Provided"
+    });
+  }
 
-    if (!email) {
-      return res.status(400).json({ error: 'Email not found in token' });
-    }
-    let user = await prisma.user.findUnique({
-      where: { email: email.toLowerCase() }
+  const token = authHeader.split(' ')[1];
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    console.log('Token decoded:', { userId: decoded.userId });
+
+    const user = await prisma.user.findUnique({
+      where: { id: decoded.userId }
     });
 
     if (!user) {
-      // Create new user if doesn't exist
-      user = await prisma.user.create({
-        data: {
-          email: email.toLowerCase(),
-          name: name || null,
-          password: 'AUTH0_USER'
-        }
-      });
+      console.log('Auth failed: User not found for id:', decoded.userId);
+      return res.status(401).json({
+        error: 'Unauthorized: invalid user'
+      })
     }
-    req.user = {
-      id: user.id,
-      email: user.email,
-      name: user.name,
-      auth0Id: auth0Id
-    };
 
+    console.log('Auth successful for user:', user.email);
+    req.user = {
+      id: user.id
+    };
     next();
-  } catch (error) {
-    console.error('Error syncing user with database:', error);
-    return res.status(500).json({ error: 'Could not authenticate user' });
   }
-};
-const authMiddleware = [checkJwt, syncUserWithDb];
+  catch (error) {
+    console.error('Auth error:', error.message);
+    return res.status(401).json({
+      error: 'Unauthorized: invalid token _ auth.middleware',
+      details: error.message
+    });
+  }
+}
 
 module.exports = authMiddleware;
