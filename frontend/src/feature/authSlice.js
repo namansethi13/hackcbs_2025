@@ -2,31 +2,52 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const isBrowser = typeof window !== "undefined";
 
+// const readFromStorage = (key) => {
+//     if (!isBrowser) {
+//         return null;
+//     }
+//     try {
+//         return window.localStorage.getItem(key);
+//     } catch (error) {
+//         return null;
+//     }
+// };
+
+// const writeToStorage = (key, value) => {
+//     if (!isBrowser) {
+//         return;
+//     }
+//     try {
+//         if (value === null || typeof value === "undefined") {
+//             window.localStorage.removeItem(key);
+//         } else {
+//             window.localStorage.setItem(key, value);
+//         }
+//     } catch (error) {
+//         // Swallow storage errors (e.g., disabled cookies, private mode)
+//     }
+// };
+
 const readFromStorage = (key) => {
-    if (!isBrowser) {
-        return null;
-    }
+    if (!isBrowser) return null;
     try {
-        return window.localStorage.getItem(key);
-    } catch (error) {
+        return window.sessionStorage.getItem(key);
+    } catch {
         return null;
     }
 };
 
 const writeToStorage = (key, value) => {
-    if (!isBrowser) {
-        return;
-    }
+    if (!isBrowser) return;
     try {
         if (value === null || typeof value === "undefined") {
-            window.localStorage.removeItem(key);
+            window.sessionStorage.removeItem(key);
         } else {
-            window.localStorage.setItem(key, value);
+            window.sessionStorage.setItem(key, value);
         }
-    } catch (error) {
-        // Swallow storage errors (e.g., disabled cookies, private mode)
-    }
+    } catch {}
 };
+
 
 const storedToken = readFromStorage("token");
 let storedUser = null;

@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { logout } from "../feature/authSlice";
+import { useAuth0 } from "@auth0/auth0-react";
 import { getAlerts, getOrganizations } from "../api/dashboardApi";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
@@ -11,7 +11,7 @@ import CreateOrganizationDrawer from "../components/CreateOrganizationDrawer";
 import OrganizationMembersPanel from "../components/OrganizationMembersPanel";
 
 const Dashboard = () => {
-  const { user, token } = useSelector((state) => state.auth);
+  const { user, getAccessTokenSilently } = useAuth0();
   const [alerts, setAlerts] = useState([]);
   const [organizations, setOrganizations] = useState([]);
   const [selectedOrgId, setSelectedOrgId] = useState(null);
@@ -19,7 +19,7 @@ const Dashboard = () => {
   const [organizationsError, setOrganizationsError] = useState("");
   const [openDrawer, setOpenDrawer] = useState(false);
   const [openMembersPanel, setOpenMembersPanel] = useState(false);
-  const dispatch = useDispatch();
+  const [token, setToken] = useState(null);
   const navigate = useNavigate();
 
   const fetchOrganizations = useCallback(
@@ -84,13 +84,23 @@ const Dashboard = () => {
   }, [token, selectedOrgId]);
 
   useEffect(() => {
-    if (!token) {
-      navigate("/login");
-      return;
-    }
+    const getToken = async () => {
+      try {
+        const accessToken = await getAccessTokenSilently();
+        setToken(accessToken);
+        sessionStorage.setItem("access_token", accessToken)
+      } catch (error) {
+        console.error("Error getting token", error);
+        navigate("/login");
+      }
+    };
+    getToken();
+  }, [getAccessTokenSilently, navigate]);
 
+  useEffect(() => {
+    if (!token) return;
     fetchOrganizations();
-  }, [token, navigate, fetchOrganizations]);
+  }, [token, fetchOrganizations]);
 
   useEffect(() => {
     if (!token || !selectedOrgId) {

@@ -10,7 +10,7 @@ import {
 import { X, UserPlus, Trash2, Shield } from "lucide-react";
 
 const OrganizationMembersPanel = ({ organizationId, onClose }) => {
-  const { token } = useSelector((state) => state.auth);
+  const token = sessionStorage.getItem("access_token");
   const [orgDetails, setOrgDetails] = useState(null);
   const [allUsers, setAllUsers] = useState([]);
   const [loading, setLoading] = useState(true);

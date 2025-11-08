@@ -1,0 +1,15 @@
+{
+  "name": "Camera Prototype",
+  "short_name": "CameraApp",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2920/2920293.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
