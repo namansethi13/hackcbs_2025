@@ -19,6 +19,7 @@ model User {
 
   memberships       Membership[]
   quickLinksCreated QuickLink[]
+  invitationsSent   Invitation[] @relation("InvitationSender")
 
   @@map("users")
 }
@@ -29,10 +30,11 @@ model Organization {
   ownerId   String   @db.ObjectId
   createdAt DateTime @default(now())
 
-  memberships Membership[]
-  alerts      Alert[]
-  quickLinks  QuickLink[]
-  patrols     Patrol[]
+  memberships  Membership[]
+  alerts       Alert[]
+  quickLinks   QuickLink[]
+  patrols      Patrol[]
+  invitations  Invitation[]
 
   @@map("organizations")
 }
@@ -86,4 +88,20 @@ model Patrol {
   organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
 
   @@map("patrols")
+}
+
+model Invitation {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  organizationId String   @db.ObjectId
+  inviterId      String   @db.ObjectId
+  email          String
+  role           String // ADMIN, SUB_ADMIN, MEMBER
+  status         String // PENDING, ACCEPTED, REJECTED
+  expiresAt      DateTime
+  createdAt      DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  inviter      User        @relation("InvitationSender", fields: [inviterId], references: [id], onDelete: Cascade)
+
+  @@map("invitations")
 }

@@ -7,6 +7,7 @@ import {
   removeMember,
   updateMemberRole,
 } from "../api/dashboardApi";
+import { inviteUserByEmail } from "../api/invitationApi";
 import { X, UserPlus, Trash2, Shield } from "lucide-react";
 
 const OrganizationMembersPanel = ({ organizationId, onClose }) => {
@@ -18,9 +19,12 @@ const OrganizationMembersPanel = ({ organizationId, onClose }) => {
   const [selectedUser, setSelectedUser] = useState("");
   const [selectedRole, setSelectedRole] = useState("MEMBER");
   const [isAdding, setIsAdding] = useState(false);
+  const [inviteEmail, setInviteEmail] = useState("");
+  const [isInviting, setIsInviting] = useState(false);
 
   useEffect(() => {
     if (!token || !organizationId) {
+      console.log(token)
       setError("Missing token or organization ID");
       setLoading(false);
       return;
@@ -95,6 +99,25 @@ const OrganizationMembersPanel = ({ organizationId, onClose }) => {
       setError(err.response?.data?.error || "Failed to add member");
     } finally {
       setIsAdding(false);
+    }
+  };
+
+  const handleInviteByEmail = async () => {
+    if (!inviteEmail) return;
+
+    setIsInviting(true);
+    setError("");
+    try {
+      await inviteUserByEmail(token, organizationId, inviteEmail, selectedRole);
+      setInviteEmail("");
+      setSelectedRole("MEMBER");
+      // Show success message
+      alert("Invitation sent successfully!");
+    } catch (err) {
+      console.error("Error sending invitation:", err);
+      setError(err.response?.data?.error || "Failed to send invitation");
+    } finally {
+      setIsInviting(false);
     }
   };
 
@@ -174,43 +197,81 @@ const OrganizationMembersPanel = ({ organizationId, onClose }) => {
 
         {/* Content */}
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
-          {/* Add New Member Section */}
-          <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-            <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-              <UserPlus size={20} />
-              Add New Member
-            </h3>
-            <div className="flex gap-3">
-              <select
-                value={selectedUser}
-                onChange={(e) => setSelectedUser(e.target.value)}
-                className="flex-1 border rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
-                disabled={isAdding}
-              >
-                <option value="">Select a user...</option>
-                {availableUsers.map((user) => (
-                  <option key={user.id} value={user.id}>
-                    {user.name || "Unnamed"} ({user.email})
-                  </option>
-                ))}
-              </select>
-              <select
-                value={selectedRole}
-                onChange={(e) => setSelectedRole(e.target.value)}
-                className="border rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
-                disabled={isAdding}
-              >
-                <option value="MEMBER">Member</option>
-                <option value="SUB_ADMIN">Sub Admin</option>
-                <option value="ADMIN">Admin</option>
-              </select>
-              <button
-                onClick={handleAddMember}
-                disabled={!selectedUser || isAdding}
-                className="bg-orange-600 hover:bg-orange-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg text-sm font-medium transition"
-              >
-                {isAdding ? "Adding..." : "Add"}
-              </button>
+          {/* Add New Member and Invite Sections */}
+          <div className="space-y-4">
+            {/* Invite by Email Section */}
+            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                <UserPlus size={20} />
+                Invite by Email
+              </h3>
+              <div className="flex gap-3">
+                <input
+                  type="email"
+                  value={inviteEmail}
+                  onChange={(e) => setInviteEmail(e.target.value)}
+                  placeholder="Enter email address"
+                  className="flex-1 border rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                  disabled={isInviting}
+                />
+                <select
+                  value={selectedRole}
+                  onChange={(e) => setSelectedRole(e.target.value)}
+                  className="border rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                  disabled={isInviting}
+                >
+                  <option value="MEMBER">Member</option>
+                  <option value="SUB_ADMIN">Sub Admin</option>
+                  <option value="ADMIN">Admin</option>
+                </select>
+                <button
+                  onClick={handleInviteByEmail}
+                  disabled={!inviteEmail || isInviting}
+                  className="bg-orange-600 hover:bg-orange-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg text-sm font-medium transition"
+                >
+                  {isInviting ? "Inviting..." : "Send Invite"}
+                </button>
+              </div>
+            </div>
+
+            {/* Add Existing User Section */}
+            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                <UserPlus size={20} />
+                Add Existing User
+              </h3>
+              <div className="flex gap-3">
+                <select
+                  value={selectedUser}
+                  onChange={(e) => setSelectedUser(e.target.value)}
+                  className="flex-1 border rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                  disabled={isAdding}
+                >
+                  <option value="">Select a user...</option>
+                  {availableUsers.map((user) => (
+                    <option key={user.id} value={user.id}>
+                      {user.name || "Unnamed"} ({user.email})
+                    </option>
+                  ))}
+                </select>
+                <select
+                  value={selectedRole}
+                  onChange={(e) => setSelectedRole(e.target.value)}
+                  className="border rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                  disabled={isAdding}
+                >
+                  <option value="MEMBER">Member</option>
+                  <option value="SUB_ADMIN">Sub Admin</option>
+                  <option value="ADMIN">Admin</option>
+                </select>
+                <button
+                  onClick={handleAddMember}
+                  disabled={!selectedUser || isAdding}
+                  className="bg-orange-600 hover:bg-orange-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg text-sm font-medium transition"
+                >
+                  {isAdding ? "Adding..." : "Add"}
+                </button>
+              </div>
             </div>
           </div>
 

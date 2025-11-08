@@ -22,4 +22,8 @@ router.get('/:orgId/alerts', controller.getAlertsForOrg);
 router.get('/:orgId/quick-links', controller.getQuickLinks);
 router.post('/:orgId/quick-links', controller.addQuickLink);
 
+// Invitation routes
+const invitationController = require('../controllers/invitation.controller');
+router.post('/:orgId/invite', invitationController.inviteUserToOrg);
+
 module.exports = router;
