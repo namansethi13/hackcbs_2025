@@ -1,0 +1,66 @@
+INFO 2025-11-08 10:03:25,159 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 10:03:25,159 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 10:04:01,027 autoreload /app/core/settings.py changed, reloading.
+INFO 2025-11-08 10:04:01,027 autoreload /app/core/settings.py changed, reloading.
+INFO 2025-11-08 15:34:29,203 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 15:34:29,203 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 15:37:02,578 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 15:37:02,578 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 15:38:43,862 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 15:38:43,862 autoreload Watching for file changes with StatReloader
+WARNING 2025-11-08 15:39:45,096 log Not Found: /
+WARNING 2025-11-08 15:39:45,096 log Not Found: /
+WARNING 2025-11-08 15:39:45,100 basehttp "GET / HTTP/1.1" 404 2324
+WARNING 2025-11-08 15:39:45,100 basehttp "GET / HTTP/1.1" 404 2324
+WARNING 2025-11-08 15:44:05,617 log Not Found: /api/vi/analyze-image/
+WARNING 2025-11-08 15:44:05,617 log Not Found: /api/vi/analyze-image/
+WARNING 2025-11-08 15:44:05,620 basehttp "OPTIONS /api/vi/analyze-image/ HTTP/1.1" 404 2409
+WARNING 2025-11-08 15:44:05,620 basehttp "OPTIONS /api/vi/analyze-image/ HTTP/1.1" 404 2409
+WARNING 2025-11-08 15:44:16,640 log Not Found: /api/vi/analyze-image/
+WARNING 2025-11-08 15:44:16,640 log Not Found: /api/vi/analyze-image/
+WARNING 2025-11-08 15:44:16,642 basehttp "OPTIONS /api/vi/analyze-image/ HTTP/1.1" 404 2409
+WARNING 2025-11-08 15:44:16,642 basehttp "OPTIONS /api/vi/analyze-image/ HTTP/1.1" 404 2409
+WARNING 2025-11-08 15:44:46,735 log Not Found: /api/vi/analyze/
+WARNING 2025-11-08 15:44:46,735 log Not Found: /api/vi/analyze/
+WARNING 2025-11-08 15:44:46,746 basehttp "OPTIONS /api/vi/analyze/ HTTP/1.1" 404 2391
+WARNING 2025-11-08 15:44:46,746 basehttp "OPTIONS /api/vi/analyze/ HTTP/1.1" 404 2391
+WARNING 2025-11-08 15:45:03,031 log Not Found: /api/v1/analyze/
+WARNING 2025-11-08 15:45:03,031 log Not Found: /api/v1/analyze/
+WARNING 2025-11-08 15:45:03,035 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 404 2391
+WARNING 2025-11-08 15:45:03,035 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 404 2391
+WARNING 2025-11-08 15:45:10,588 log Not Found: /api/v1/analyze/
+WARNING 2025-11-08 15:45:10,588 log Not Found: /api/v1/analyze/
+WARNING 2025-11-08 15:45:10,595 basehttp "GET /api/v1/analyze/ HTTP/1.1" 404 2387
+WARNING 2025-11-08 15:45:10,595 basehttp "GET /api/v1/analyze/ HTTP/1.1" 404 2387
+WARNING 2025-11-08 15:45:29,525 log Method Not Allowed: /api/v1/analyze
+WARNING 2025-11-08 15:45:29,525 log Method Not Allowed: /api/v1/analyze
+WARNING 2025-11-08 15:45:29,527 basehttp "GET /api/v1/analyze HTTP/1.1" 405 5596
+WARNING 2025-11-08 15:45:29,527 basehttp "GET /api/v1/analyze HTTP/1.1" 405 5596
+WARNING 2025-11-08 15:45:32,182 log Not Found: /api/v1/analyze/
+WARNING 2025-11-08 15:45:32,182 log Not Found: /api/v1/analyze/
+WARNING 2025-11-08 15:45:32,187 basehttp "GET /api/v1/analyze/ HTTP/1.1" 404 2387
+WARNING 2025-11-08 15:45:32,187 basehttp "GET /api/v1/analyze/ HTTP/1.1" 404 2387
+INFO 2025-11-08 15:45:37,872 autoreload /app/core/urls.py changed, reloading.
+INFO 2025-11-08 15:45:37,872 autoreload /app/core/urls.py changed, reloading.
+INFO 2025-11-08 15:45:38,548 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 15:45:38,548 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 15:45:45,171 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:45:45,171 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:48:11,895 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:48:11,895 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:50:33,961 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:50:33,961 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:50:35,085 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:50:35,085 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:50:35,749 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:50:35,749 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:50:35,934 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:50:35,934 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:50:36,155 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:50:36,155 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:51:15,390 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:51:15,390 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 15:53:36,687 autoreload /app/core/settings.py changed, reloading.
+INFO 2025-11-08 15:53:36,687 autoreload /app/core/settings.py changed, reloading.
+INFO 2025-11-08 15:53:37,393 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 15:53:37,393 autoreload Watching for file changes with StatReloader
