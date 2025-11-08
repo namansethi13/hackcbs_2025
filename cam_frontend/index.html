@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Camera App</h1>
+        <video id="video" autoplay playsinline></video>
+        <button id="startbtn">Start Button</button>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script src="script.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log("Service Worker registered"))
+        .catch(err => console.error("SW registration failed:", err));
+    }
+  </script>
+</body>
+</html>
