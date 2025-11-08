@@ -1,0 +1,89 @@
+// This is your Prisma schema file
+// Learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String   @unique
+  name      String?
+  password  String
+  createdAt DateTime @default(now())
+
+  memberships       Membership[]
+  quickLinksCreated QuickLink[]
+
+  @@map("users")
+}
+
+model Organization {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  ownerId   String   @db.ObjectId
+  createdAt DateTime @default(now())
+
+  memberships Membership[]
+  alerts      Alert[]
+  quickLinks  QuickLink[]
+  patrols     Patrol[]
+
+  @@map("organizations")
+}
+
+model Membership {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  organizationId String   @db.ObjectId
+  userId         String   @db.ObjectId
+  role           String // ADMIN, SUB_ADMIN, MEMBER
+  joinedAt       DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([organizationId, userId])
+  @@map("memberships")
+}
+
+model Alert {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  organizationId String   @db.ObjectId
+  severity       String?
+  message        String?
+  timestamp      DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@map("alerts")
+}
+
+model QuickLink {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  organizationId String   @db.ObjectId
+  label          String
+  url            String
+  createdBy      String?  @db.ObjectId
+  createdAt      DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  creator      User?        @relation(fields: [createdBy], references: [id], onDelete: SetNull)
+
+  @@map("quickLinks")
+}
+
+model Patrol {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  organizationId String   @db.ObjectId
+  name           String?
+  scheduledAt    DateTime
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@map("patrols")
+}

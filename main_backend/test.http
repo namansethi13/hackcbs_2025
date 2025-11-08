@@ -1,0 +1,157 @@
+# test.http
+
+# --- Variables ---
+# We store values here to reuse them
+@baseUrl = http://localhost:8000/api
+@token =
+@newOrgId =
+@newUserEmail = member@example.com
+@newUserId =
+
+###
+# ===============================================
+# 1. AUTH - /api/auth
+# ===============================================
+
+### 1A. Signup User 1 (This will be our ADMIN)
+# We will log in as this user.
+POST {{baseUrl}}/auth/signup
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "password123",
+  "name": "Aayush the Admin"
+}
+
+### 1B. Signup User 2 (This will be our SUB_ADMIN)
+# We need a second user to add to our organization.
+POST {{baseUrl}}/auth/signup
+Content-Type: application/json
+
+{
+  "email": "{{newUserEmail}}",
+  "password": "password123",
+  "name": "Naman the Sub-Admin"
+}
+
+### 1C. Login as ADMIN
+# This is the most important step.
+# After running this, copy the "token" value from the response.
+# Paste it into the `@token` variable at the top of this file.
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "password123"
+}
+
+###
+# ===============================================
+# 2. USER - /api/users
+# (Requires a token!)
+# ===============================================
+# NOTE: Make sure you've pasted the token into the @token variable!
+
+### 2A. Get My Profile
+# This should show "Aayush the Admin"
+GET {{baseUrl}}/users/me
+Authorization: Bearer {{token}}
+
+### 2B. Update My Profile
+# Let's change the name
+PUT {{baseUrl}}/users/me
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Aayush (Updated Name)"
+}
+
+
+###
+# ===============================================
+# 3. ORGANIZATION - /api/orgs
+# (Requires a token!)
+# ===============================================
+
+### 3A. Create an Organization
+# After running this, copy the "id" of the new org from the response.
+# Paste it into the `@newOrgId` variable at the top.
+POST {{baseUrl}}/orgs
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Chaos Reporting Team"
+}
+
+### 3B. Get My Organizations
+# You should see "Chaos Reporting Team" listed.
+GET {{baseUrl}}/orgs
+Authorization: Bearer {{token}}
+
+
+### 3C. Get Organization Details
+# You should see "Aayush (Updated Name)" listed as the only member (as ADMIN).
+# NOTE: Make sure you've pasted the org ID into @newOrgId!
+GET {{baseUrl}}/orgs/{{newOrgId}}
+Authorization: Bearer {{token}}
+
+
+###
+# ===============================================
+# 4. MEMBER MANAGEMENT - /api/orgs/:orgId/members
+# (Requires a token AND an Org ID!)
+# ===============================================
+
+### 4A. Add a Member to the Org (as ADMIN)
+# This adds the "member@example.com" user we created.
+POST {{baseUrl}}/orgs/{{newOrgId}}/members
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "email": "{{newUserEmail}}",
+  "role": "SUB_ADMIN"
+}
+
+### 4B. Get Org Details (Again)
+# Now run this again. You should see TWO members:
+# 1. Aayush (Updated Name) - ADMIN
+# 2. Naman the Sub-Admin - SUB_ADMIN
+#
+# **IMPORTANT**: From the response, find Naman's user "id"
+# and paste it into the `@newUserId` variable at the top.
+GET {{baseUrl}}/orgs/{{newOrgId}}
+Authorization: Bearer {{token}}
+
+
+### 4C. Update a Member's Role
+# Let's change Naman from SUB_ADMIN to MEMBER.
+# NOTE: Make sure you've pasted Naman's ID into @newUserId!
+PUT {{baseUrl}}/orgs/{{newOrgId}}/members/{{newUserId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "role": "MEMBER"
+}
+
+### 4D. Remove a Member from the Org
+# This will remove Naman from the org.
+DELETE {{baseUrl}}/orgs/{{newOrgId}}/members/{{newUserId}}
+Authorization: Bearer {{token}}
+
+
+###
+# ===============================================
+# 5. ALERTS - /api/orgs/:orgId/alerts
+# ===============================================
+
+### 5A. Get Alerts for Org (will be empty)
+# This will return: { "alerts": [] }
+# This is correct! Naman's backend hasn't added any yet.
+GET {{baseUrl}}/orgs/{{newOrgId}}/alerts
+Authorization: Bearer {{token}}
