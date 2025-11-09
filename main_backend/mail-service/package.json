@@ -1,0 +1,17 @@
+{
+  "name": "crowdguard-email-service",
+  "version": "1.0.0",
+  "description": "GCP Cloud Function for sending invitation emails",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gcloud functions deploy sendEmail --runtime nodejs20 --trigger-http --allow-unauthenticated --entry-point sendEmail",
+    "test": "node test-local.js"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.3.0",
+    "nodemailer": "^6.9.7"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
