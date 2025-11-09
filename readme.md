@@ -1,5 +1,11 @@
 # **AI-Powered Surveillance System**
 
+## Problem statement
+
+In large institutions such as colleges, malls, and public venues, monitoring multiple CCTV feeds in real time is critical for ensuring safety. However, relying solely on human guards to identify threats like stampedes, fires, or fights introduces a high margin of human error and delayed response. With dozens of camera streams and limited manpower, critical incidents often go unnoticed until it’s too late — resulting in property damage, injuries, or chaos.
+
+There is an urgent need for an intelligent, automated surveillance system that can analyze live video feeds, detect potential hazards or unusual behavior in real-time, and alert relevant authorities instantly minimizing human dependency and response time. The challenge lies in building a resource-efficient, scalable, and privacy-conscious AI-driven system capable of handling multiple camera inputs, integrating with existing infrastructure, and delivering actionable insights to decision-makers without overwhelming them with false alarms.
+
 ---
 
 ## **System Architecture Overview**
