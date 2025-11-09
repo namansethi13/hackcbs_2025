@@ -8,6 +8,7 @@
     body { font-family: system-ui, Arial; max-width:640px; margin:40px auto; }
     .btn { padding:8px 12px; border-radius:6px; cursor:pointer; }
     #status { margin-top:12px; white-space:pre-wrap; }
+    label { display:block; margin-top:10px; }
   </style>
 </head>
 <body>
@@ -18,7 +19,13 @@
       Choose image:
       <input type="file" id="imageInput" name="image" accept="image/*" />
     </label>
-    <br/><br/>
+
+    <label>
+      Location:
+      <input type="text" id="locationInput" name="location" placeholder="e.g. Main Gate" />
+    </label>
+
+    <br/>
     <button type="submit" class="btn">Upload</button>
   </form>
 
@@ -28,22 +35,25 @@
   <script>
     const form = document.getElementById('uploadForm');
     const fileInput = document.getElementById('imageInput');
+    const locationInput = document.getElementById('locationInput');
     const status = document.getElementById('status');
     const progress = document.getElementById('progress');
 
-    // change this to whatever URL your API is mounted at
+    // Update this URL as needed
     const API_URL = 'http://localhost:8000/api/v1/analyze/';
 
-    // helper to get CSRF token (if you use Django's CSRF cookie)
+    // helper to get CSRF token (if using Django's CSRF cookie)
     function getCookie(name) {
       const v = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
       return v ? v.pop() : '';
     }
 
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
       status.textContent = '';
       const file = fileInput.files[0];
+      const location = locationInput.value.trim();
+
       if (!file) {
         status.textContent = 'Pick an image first.';
         return;
@@ -51,22 +61,19 @@
 
       const fd = new FormData();
       fd.append('image', file);
+      fd.append('location', location || 'Unknown Location');
 
-      // Use fetch with progress via XHR (fetch has no reliable upload progress).
       const xhr = new XMLHttpRequest();
       xhr.open('POST', API_URL, true);
 
-      // If your DRF setup requires CSRF (session auth), send the token:
+      // Optional CSRF header for Django
       const csrftoken = getCookie('csrftoken');
-      if (csrftoken) {
-        xhr.setRequestHeader('X-CSRFToken', csrftoken);
-      }
+      if (csrftoken) xhr.setRequestHeader('X-CSRFToken', csrftoken);
 
       xhr.upload.onprogress = (ev) => {
         if (ev.lengthComputable) {
           progress.style.display = 'block';
-          const percent = Math.round((ev.loaded / ev.total) * 100);
-          progress.value = percent;
+          progress.value = Math.round((ev.loaded / ev.total) * 100);
         }
       };
 

@@ -1,18 +1,20 @@
 """
 LangGraph Security Monitoring Agent - Analyzes live event images for incidents
+With automated Firebase incident management using tool calling
 """
 
-from typing import TypedDict, Literal
+from typing import TypedDict, Literal, Annotated
 from langgraph.graph import StateGraph, END
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
+from langchain_core.tools import tool
 from PIL import Image
 import json
 from datetime import datetime
 import base64
 import io
 import os
-
+from .firebase_tools import fetch_all_incidents, find_incident, report_incident, mark_incident_fixed
 
 
 class SecurityIncidentState(TypedDict):
@@ -31,9 +33,63 @@ class SecurityIncidentState(TypedDict):
     recommended_action: str | None  # Suggested response
     people_count: int | None  # Approximate number of people visible
     
+    # Firebase management
+    existing_incidents: list | None  # All existing incidents from Firebase
+    incident_reported: bool  # Whether incident was reported to Firebase
+    incident_resolved: bool  # Whether incident was marked as resolved
+    firebase_doc_id: str | None  # Document ID in Firebase
+    
     # Processing flags
     analysis_complete: bool
+    firebase_complete: bool
     error: str | None
+    messages: Annotated[list, "messages"]  # For tool calling
+
+
+# Define tools for the agent
+@tool
+def get_all_incidents() -> dict:
+    """Fetch all incidents from Firebase to check for existing reports."""
+    return fetch_all_incidents()
+
+
+@tool
+def search_incident(timestamp: str, location: str, incident_type: str) -> dict:
+    """Search for an existing incident matching timestamp, location, and type."""
+    return find_incident(timestamp, location, incident_type)
+
+
+@tool
+def create_incident_report(
+    timestamp: str,
+    location: str,
+    incident_type: str,
+    severity: str,
+    description: str,
+    confidence: float,
+    people_count: int,
+    recommended_action: str
+) -> dict:
+    """Create a new incident report in Firebase."""
+    data = {
+        "timestamp": timestamp,
+        "location": location,
+        "incident_type": incident_type,
+        "severity": severity,
+        "description": description,
+        "confidence": confidence,
+        "people_count": people_count,
+        "recommended_action": recommended_action,
+        "is_fixed": False,
+        "reported_at": datetime.now().isoformat()
+    }
+    return report_incident(data)
+
+
+@tool
+def resolve_incident(doc_id: str) -> dict:
+    """Mark an incident as resolved/fixed in Firebase."""
+    return mark_incident_fixed(doc_id)
 
 
 def encode_image_to_base64(image_path: str) -> str:
@@ -69,7 +125,7 @@ def load_and_validate_image(state: SecurityIncidentState) -> SecurityIncidentSta
 def analyze_security_incident(state: SecurityIncidentState) -> SecurityIncidentState:
     """Analyze image using Gemini for security incidents"""
     try:
-        # Initialize Gemini model (using Flash for speed in real-time monitoring)
+        # Initialize Gemini model
         model = ChatGoogleGenerativeAI(
             model=os.getenv("LLM_MODEL", "gemini-2.0-flash-exp"),
             temperature=0.3
@@ -88,6 +144,7 @@ def analyze_security_incident(state: SecurityIncidentState) -> SecurityIncidentS
 **Your Task:**
 Analyze this image for ANY security concerns, safety hazards, or incidents that require attention.
 
+This is image from live video stream so don't report like 'this image shows' do something like this thing is happening
 **Incidents to detect (but not limited to):**
 - Fire/Smoke (any signs of flames, smoke, or burning)
 - Fighting/Violence (physical altercations, aggressive behavior)
@@ -106,17 +163,14 @@ Analyze this image for ANY security concerns, safety hazards, or incidents that 
 Provide your analysis in JSON format with these fields:
 
 {{
-  "is_problem": boolean,  // true if ANY issue detected, false if everything appears normal
-  "incident_type": string,  // One of: "fire", "fight", "stampede", "medical_emergency", "suspicious_activity", 
-                            // "unauthorized_access", "vandalism", "weapon_detected", "hazard", "overcrowding", 
-                            // "lost_person", "natural_hazard", "normal", "other"
-  "severity": string,  // "low" (minor, no immediate danger), "medium" (requires monitoring/response), 
-                      // "high" (urgent response needed), "critical" (immediate emergency response)
-  "confidence": float,  // 0.0 to 1.0 - how confident are you in this assessment
-  "description": string,  // Clear, concise description of what you see (2-3 sentences max)
-  "recommended_action": string,  // Specific action security should take
-  "people_count": number,  // Approximate count of people visible (0 if none)
-  "additional_concerns": [list of strings]  // Any other notable observations
+  "is_problem": boolean,
+  "incident_type": string,
+  "severity": string,
+  "confidence": float,
+  "description": string,
+  "recommended_action": string,
+  "people_count": number,
+  "additional_concerns": [list of strings]
 }}
 
 **Important Guidelines:**
@@ -143,7 +197,7 @@ Return ONLY valid JSON, no markdown formatting or extra text."""
         response = model.invoke([message])
         response_text = response.content.strip()
         
-        # Clean up response (remove markdown if present)
+        # Clean up response
         if "```json" in response_text:
             response_text = response_text.split("```json")[1].split("```")[0].strip()
         elif "```" in response_text:
@@ -180,13 +234,14 @@ Return ONLY valid JSON, no markdown formatting or extra text."""
             "recommended_action": result["recommended_action"],
             "people_count": result.get("people_count"),
             "analysis_complete": True,
+            "messages": state.get("messages", []),
             "error": None
         }
         
     except json.JSONDecodeError as e:
         return {
             **state,
-            "error": f"Failed to parse AI response: {str(e)}. Response was: {response_text[:200]}",
+            "error": f"Failed to parse AI response: {str(e)}",
             "analysis_complete": True
         }
     except Exception as e:
@@ -197,6 +252,119 @@ Return ONLY valid JSON, no markdown formatting or extra text."""
         }
 
 
+def manage_firebase_incidents(state: SecurityIncidentState) -> SecurityIncidentState:
+    """
+    Use AI agent with tool calling to automatically manage incidents in Firebase:
+    1. Fetch all existing incidents
+    2. Check if current incident already exists
+    3. Report new incidents
+    4. Resolve incidents that are now clear
+    """
+    try:
+        # Initialize model with tools
+        model = ChatGoogleGenerativeAI(
+            model=os.getenv("LLM_MODEL", "gemini-2.0-flash-exp"),
+            temperature=0
+        ).bind_tools([
+            get_all_incidents,
+            search_incident,
+            create_incident_report,
+            resolve_incident
+        ])
+        
+        # Create decision-making prompt
+        decision_prompt = f"""You are an automated incident management system. Based on the security analysis, manage incidents in Firebase.
+
+**Current Analysis:**
+- Timestamp: {state['timestamp']}
+- Location: {state.get('location', 'Unknown')}
+- Problem Detected: {state['is_problem']}
+- Incident Type: {state['incident_type']}
+- Severity: {state['severity']}
+- Description: {state['description']}
+- Confidence: {state['confidence']}
+- People Count: {state['people_count']}
+- Recommended Action: {state['recommended_action']}
+
+**Your Task:**
+1. First, use get_all_incidents() to fetch existing incidents
+2. Check if this incident (matching timestamp, location, incident_type) already exists using search_incident()
+3. Decision logic:
+   - If is_problem=True AND incident doesn't exist: Create new report using create_incident_report()
+   - If is_problem=False: Search for any open incidents at this location and resolve them using resolve_incident()
+   - If incident exists and is_problem=True: Do nothing (already reported)
+   
+4. After taking action, respond with a summary of what you did.
+
+Be autonomous - make decisions and use tools without asking for confirmation."""
+
+        messages = [HumanMessage(content=decision_prompt)]
+        
+        print(f"\n{'='*60}")
+        print(f"FIREBASE INCIDENT MANAGEMENT")
+        print(f"{'='*60}")
+        
+        max_iterations = 10
+        iteration = 0
+        
+        while iteration < max_iterations:
+            iteration += 1
+            response = model.invoke(messages)
+            messages.append(response)
+            
+            # Check if the model wants to use tools
+            if not response.tool_calls:
+                # No more tool calls, agent is done
+                print(f"\n✓ Agent Decision: {response.content}")
+                break
+            
+            # Execute tool calls
+            for tool_call in response.tool_calls:
+                tool_name = tool_call["name"]
+                tool_args = tool_call["args"]
+                
+                print(f"\n🔧 Executing: {tool_name}")
+                print(f"   Args: {tool_args}")
+                
+                # Execute the tool
+                if tool_name == "get_all_incidents":
+                    tool_result = get_all_incidents.invoke({})
+                elif tool_name == "search_incident":
+                    tool_result = search_incident.invoke(tool_args)
+                elif tool_name == "create_incident_report":
+                    tool_result = create_incident_report.invoke(tool_args)
+                elif tool_name == "resolve_incident":
+                    tool_result = resolve_incident.invoke(tool_args)
+                else:
+                    tool_result = {"error": f"Unknown tool: {tool_name}"}
+                
+                print(f"   Result: {tool_result}")
+                
+                # Add tool result to messages
+                messages.append(
+                    ToolMessage(
+                        content=json.dumps(tool_result),
+                        tool_call_id=tool_call["id"]
+                    )
+                )
+        
+        print(f"{'='*60}\n")
+        
+        return {
+            **state,
+            "firebase_complete": True,
+            "messages": messages
+        }
+        
+    except Exception as e:
+        print(f"❌ Firebase management error: {str(e)}")
+        return {
+            **state,
+            "firebase_complete": True,
+            "error": f"Firebase management failed: {str(e)}"
+        }
+
+
 def route_after_validation(state: SecurityIncidentState) -> str:
     """Route based on image validation"""
     if state.get("error"):
@@ -204,8 +372,15 @@ def route_after_validation(state: SecurityIncidentState) -> str:
     return "analyze"
 
 
+def route_after_analysis(state: SecurityIncidentState) -> str:
+    """Route based on analysis completion"""
+    if state.get("error") or not state.get("analysis_complete"):
+        return END
+    return "manage_firebase"
+
+
 def create_security_monitoring_agent():
-    """Create and compile the LangGraph security monitoring workflow"""
+    """Create and compile the LangGraph security monitoring workflow with Firebase management"""
     
     # Create the graph
     workflow = StateGraph(SecurityIncidentState)
@@ -213,9 +388,11 @@ def create_security_monitoring_agent():
     # Add nodes
     workflow.add_node("load_image", load_and_validate_image)
     workflow.add_node("analyze", analyze_security_incident)
+    workflow.add_node("manage_firebase", manage_firebase_incidents)
     
     # Define edges
     workflow.set_entry_point("load_image")
+    
     workflow.add_conditional_edges(
         "load_image",
         route_after_validation,
@@ -224,7 +401,17 @@ def create_security_monitoring_agent():
             END: END
         }
     )
-    workflow.add_edge("analyze", END)
+    
+    workflow.add_conditional_edges(
+        "analyze",
+        route_after_analysis,
+        {
+            "manage_firebase": "manage_firebase",
+            END: END
+        }
+    )
+    
+    workflow.add_edge("manage_firebase", END)
     
     # Compile the graph
     return workflow.compile()
@@ -234,16 +421,17 @@ def create_security_monitoring_agent():
 def monitor_security_image(
     image_path: str,
     timestamp: str = None,
-    location: str = None
+    location: str = None,
+    organization_id: str = None
 ) -> dict:
     """
-    Run security monitoring on a single image
+    Run security monitoring on a single image with automated Firebase management
     
     Args:
         image_path: Path to image file or base64 string
         timestamp: Time of capture (defaults to current time)
         location: Optional location/camera identifier
-    
+        organization_id: this is the id of organizaiton this footage is
     Returns:
         Dictionary with analysis results
     """
@@ -265,52 +453,38 @@ def monitor_security_image(
         "description": None,
         "recommended_action": None,
         "people_count": None,
+        "existing_incidents": None,
+        "incident_reported": False,
+        "incident_resolved": False,
+        "firebase_doc_id": None,
         "analysis_complete": False,
-        "error": None
+        "firebase_complete": False,
+        "error": None,
+        "messages": []
     }
     
     # Run the agent
     result = agent.invoke(initial_state)
-    print("got the following result")
-    print(result)
+    print("\n✓ Security monitoring complete with Firebase management")
+    
     return result
 
 
 # Example usage
 if __name__ == "__main__":
-    # Example 1: Single image analysis
     result = monitor_security_image(
         image_path="fire.jpg",
         timestamp="2025-11-08 14:30:45",
         location="Main Entrance - Camera 1"
     )
     
-    # Check if incident detected
-    if result["is_problem"]:
-        print(f"🚨 ALERT: {result['incident_type']} - {result['severity']} severity")
+    # Check results
+    if result.get("error"):
+        print(f"❌ Error: {result['error']}")
+    elif result["is_problem"]:
+        print(f"\n🚨 ALERT: {result['incident_type']} - {result['severity']} severity")
         print(f"Action: {result['recommended_action']}")
+        print(f"Firebase: {'Reported' if result.get('incident_reported') else 'Already exists or error'}")
     else:
-        print(result)
-        print("✓ No issues detected")
-    
-    # Example 2: Continuous monitoring simulation
-    # print("\n" + "="*60)
-    # print("CONTINUOUS MONITORING SIMULATION")
-    # print("="*60 + "\n")
-    
-    # camera_feeds = [
-    #     ("camera1.jpg", "2025-11-08 14:30:00", "Main Hall"),
-    #     ("camera2.jpg", "2025-11-08 14:30:05", "Exit Gate"),
-    #     ("camera3.jpg", "2025-11-08 14:30:10", "Parking Lot"),
-    # ]
-    
-    # for img_path, time, loc in camera_feeds:
-    #     try:
-    #         result = monitor_security_image(img_path, time, loc)
-            
-    #         # Log to file or database in production
-    #         if result["is_problem"] and result["severity"] in ["high", "critical"]:
-    #             # Trigger immediate alert
-    #             print(f"🚨 IMMEDIATE ATTENTION REQUIRED: {loc}")
-    #     except Exception as e:
-    #         print(f"Error processing {loc}: {e}")
+        print(f"\n✓ No issues detected")
+        print(f"Firebase: {'Incidents resolved' if result.get('incident_resolved') else 'No action needed'}")

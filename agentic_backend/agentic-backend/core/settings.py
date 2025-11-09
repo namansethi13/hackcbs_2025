@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ntsj=-wbycnujk0hit$&c4*daifh-ma=#himyhk$i8l^1u%ad7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["f2234eb74941.ngrok-free.app"]
 
 
 # Application definition
@@ -40,8 +40,12 @@ INSTALLED_APPS = [
     "corsheaders",
     'rest_framework'
 ]
+CORS_ALLOW_ALL_ORIGINS = True
+
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

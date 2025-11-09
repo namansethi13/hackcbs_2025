@@ -1,0 +1,37 @@
+# Kafka Client
+kafka-python==2.0.2
+
+# Image Processing
+Pillow==10.3.0
+
+# LangChain Framework - Latest compatible versions
+langchain==0.3.7
+langchain-core==0.3.15
+langchain-google-genai==2.0.5
+
+# LangGraph for Agent Workflow
+langgraph==0.2.45
+
+# Google Generative AI
+google-generativeai==0.8.3
+
+# Additional Core Dependencies (will be installed automatically with above)
+# google-api-core
+# google-auth
+# googleapis-common-protos
+
+# Async Support
+aiohttp==3.10.10
+
+# Environment Variables
+python-dotenv==1.0.1
+
+# Pydantic for data validation (required by LangChain)
+pydantic==2.9.2
+pydantic-core==2.23.4
+
+# Additional typing support
+typing-extensions==4.12.2
+
+# Firebase admin usin this for tool calling
+firebase-admin

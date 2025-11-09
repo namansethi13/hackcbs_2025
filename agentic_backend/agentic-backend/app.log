@@ -64,3 +64,719 @@ INFO 2025-11-08 15:53:36,687 autoreload /app/core/settings.py changed, reloading
 INFO 2025-11-08 15:53:36,687 autoreload /app/core/settings.py changed, reloading.
 INFO 2025-11-08 15:53:37,393 autoreload Watching for file changes with StatReloader
 INFO 2025-11-08 15:53:37,393 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:03:56,697 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:03:56,697 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:06:15,765 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:06:15,765 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:08:16,300 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:08:16,300 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:09:19,511 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:09:19,511 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:12:17,790 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:12:17,790 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:12:53,684 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:12:53,684 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:15:06,624 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 19:15:06,624 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 19:15:39,379 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 19:15:39,379 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 19:16:40,357 autoreload /app/core/settings.py changed, reloading.
+INFO 2025-11-08 19:16:40,357 autoreload /app/core/settings.py changed, reloading.
+INFO 2025-11-08 19:16:40,970 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:16:40,970 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:16:53,254 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 19:16:53,254 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 19:17:01,841 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 19:17:01,841 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 172
+INFO 2025-11-08 19:17:06,523 autoreload /app/core/settings.py changed, reloading.
+INFO 2025-11-08 19:17:06,523 autoreload /app/core/settings.py changed, reloading.
+INFO 2025-11-08 19:17:06,954 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:17:06,954 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:17:36,669 autoreload /app/core/settings.py changed, reloading.
+INFO 2025-11-08 19:17:36,669 autoreload /app/core/settings.py changed, reloading.
+INFO 2025-11-08 19:17:37,238 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:17:37,238 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:17:40,135 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:17:40,135 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:17:40,192 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 19:17:40,201 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-08 19:17:40,202 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 19:17:40,310 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 19:17:40,312 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 19:17:40,315 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-08 19:17:40,349 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 33
+INFO 2025-11-08 19:17:40,349 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 33
+INFO 2025-11-08 19:23:52,460 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:23:52,460 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:23:52,517 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 33
+INFO 2025-11-08 19:23:52,517 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 33
+INFO 2025-11-08 19:25:13,265 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:25:13,265 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:25:13,327 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 33
+INFO 2025-11-08 19:25:13,327 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 33
+INFO 2025-11-08 19:40:16,391 autoreload /app/core/views.py changed, reloading.
+INFO 2025-11-08 19:40:16,391 autoreload /app/core/views.py changed, reloading.
+INFO 2025-11-08 19:40:17,378 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:40:17,378 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:40:27,812 autoreload /app/core/views.py changed, reloading.
+INFO 2025-11-08 19:40:27,812 autoreload /app/core/views.py changed, reloading.
+INFO 2025-11-08 19:40:29,262 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:40:29,262 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:43:56,030 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:43:56,030 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:43:56,089 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 19:43:56,100 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-08 19:43:56,101 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 19:43:56,214 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 19:43:56,216 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 19:43:56,218 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-08 19:43:56,239 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 19634
+INFO 2025-11-08 19:43:56,239 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 19634
+INFO 2025-11-08 19:44:46,827 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:44:46,827 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:45:42,930 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:45:42,930 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:46:52,190 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:46:52,190 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:46:52,239 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 19:46:52,250 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-08 19:46:52,251 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 19:46:52,364 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 19:46:52,366 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 19:46:52,370 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-08 19:46:52,413 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 19634
+INFO 2025-11-08 19:46:52,413 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 19634
+INFO 2025-11-08 19:48:45,420 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:48:45,420 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:49:47,013 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:49:47,013 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:50:16,326 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:50:16,326 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:50:16,378 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 19:50:16,392 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-08 19:50:16,394 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 19:50:16,507 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 19:50:16,511 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 19:50:16,515 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-08 19:50:16,591 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 19634
+INFO 2025-11-08 19:50:16,591 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 19634
+INFO 2025-11-08 19:51:10,756 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:51:10,756 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:51:53,057 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:51:53,057 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:51:53,108 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 19:51:53,116 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-08 19:51:53,117 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 19:51:53,226 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 19:51:53,228 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 19:51:53,230 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-08 19:51:53,266 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 19634
+INFO 2025-11-08 19:51:53,266 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 19634
+INFO 2025-11-08 19:56:04,677 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:56:04,677 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 19:57:11,035 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:57:11,035 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 19:57:11,086 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 19:57:11,104 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-08 19:57:11,105 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 19:57:11,214 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 19:57:11,217 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 19:57:11,221 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-08 19:57:11,262 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 13682
+INFO 2025-11-08 19:57:11,262 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 13682
+INFO 2025-11-08 20:11:58,931 client_async Closing idle connection 1, last active 587685 ms ago
+INFO 2025-11-08 20:11:58,934 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-08 20:11:58,944 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 20:11:58,947 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 20:43:53,315 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 20:43:53,315 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 20:46:16,228 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 20:46:16,228 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 20:47:35,491 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 20:47:35,491 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 20:52:55,259 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 20:52:55,259 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 20:55:06,060 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 20:55:06,060 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 20:57:41,408 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 20:57:41,408 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 20:57:41,468 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 20:57:41,499 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-08 20:57:41,503 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 20:57:41,613 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 20:57:41,614 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 20:57:41,616 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-08 20:57:41,654 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 19634
+INFO 2025-11-08 20:57:41,654 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 19634
+INFO 2025-11-08 21:01:41,594 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 21:01:41,594 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 21:01:41,708 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 19634
+INFO 2025-11-08 21:01:41,708 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 19634
+INFO 2025-11-08 21:07:45,940 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 21:07:45,940 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 21:08:19,290 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 21:08:19,290 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 21:08:19,351 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 21:08:19,365 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-08 21:08:19,365 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 21:08:19,478 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 21:08:19,481 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 21:08:19,483 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-08 21:08:19,536 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 19634
+INFO 2025-11-08 21:08:19,536 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 19634
+INFO 2025-11-08 21:10:35,565 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 21:10:35,565 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 21:10:35,689 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 13680
+INFO 2025-11-08 21:10:35,689 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 13680
+INFO 2025-11-08 21:13:55,512 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 21:13:55,512 autoreload Watching for file changes with StatReloader
+INFO 2025-11-08 21:15:22,102 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 21:15:22,102 basehttp "OPTIONS /api/v1/analyze/ HTTP/1.1" 200 0
+INFO 2025-11-08 21:15:22,159 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 21:15:22,192 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-08 21:15:22,193 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 21:15:22,308 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-08 21:15:22,310 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-08 21:15:22,311 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-08 21:15:22,389 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 9997
+INFO 2025-11-08 21:15:22,389 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 9997
+INFO 2025-11-09 01:03:20,727 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 01:03:20,727 autoreload Watching for file changes with StatReloader
+ERROR 2025-11-09 01:05:37,062 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+ERROR 2025-11-09 01:05:37,062 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+WARNING 2025-11-09 01:05:37,067 basehttp "GET / HTTP/1.1" 400 62700
+WARNING 2025-11-09 01:05:37,067 basehttp "GET / HTTP/1.1" 400 62700
+ERROR 2025-11-09 01:05:37,500 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+ERROR 2025-11-09 01:05:37,500 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+WARNING 2025-11-09 01:05:37,504 basehttp "GET /favicon.ico HTTP/1.1" 400 62495
+WARNING 2025-11-09 01:05:37,504 basehttp "GET /favicon.ico HTTP/1.1" 400 62495
+INFO 2025-11-09 01:06:00,416 autoreload /app/core/settings.py changed, reloading.
+INFO 2025-11-09 01:06:00,416 autoreload /app/core/settings.py changed, reloading.
+INFO 2025-11-09 01:06:01,571 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 01:06:01,571 autoreload Watching for file changes with StatReloader
+ERROR 2025-11-09 01:06:05,625 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+ERROR 2025-11-09 01:06:05,625 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+WARNING 2025-11-09 01:06:05,629 basehttp "GET / HTTP/1.1" 400 62586
+WARNING 2025-11-09 01:06:05,629 basehttp "GET / HTTP/1.1" 400 62586
+ERROR 2025-11-09 01:06:06,065 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+ERROR 2025-11-09 01:06:06,065 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+WARNING 2025-11-09 01:06:06,068 basehttp "GET /favicon.ico HTTP/1.1" 400 62525
+WARNING 2025-11-09 01:06:06,068 basehttp "GET /favicon.ico HTTP/1.1" 400 62525
+ERROR 2025-11-09 01:06:08,013 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+ERROR 2025-11-09 01:06:08,013 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+WARNING 2025-11-09 01:06:08,015 basehttp "GET / HTTP/1.1" 400 62586
+WARNING 2025-11-09 01:06:08,015 basehttp "GET / HTTP/1.1" 400 62586
+ERROR 2025-11-09 01:06:08,406 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+ERROR 2025-11-09 01:06:08,406 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+WARNING 2025-11-09 01:06:08,408 basehttp "GET /favicon.ico HTTP/1.1" 400 62525
+WARNING 2025-11-09 01:06:08,408 basehttp "GET /favicon.ico HTTP/1.1" 400 62525
+ERROR 2025-11-09 01:06:15,239 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+ERROR 2025-11-09 01:06:15,239 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+WARNING 2025-11-09 01:06:15,244 basehttp "GET / HTTP/1.1" 400 62586
+WARNING 2025-11-09 01:06:15,244 basehttp "GET / HTTP/1.1" 400 62586
+ERROR 2025-11-09 01:06:15,637 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+ERROR 2025-11-09 01:06:15,637 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+WARNING 2025-11-09 01:06:15,643 basehttp "GET /favicon.ico HTTP/1.1" 400 62525
+WARNING 2025-11-09 01:06:15,643 basehttp "GET /favicon.ico HTTP/1.1" 400 62525
+ERROR 2025-11-09 01:06:17,319 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+ERROR 2025-11-09 01:06:17,319 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+WARNING 2025-11-09 01:06:17,321 basehttp "GET / HTTP/1.1" 400 62586
+WARNING 2025-11-09 01:06:17,321 basehttp "GET / HTTP/1.1" 400 62586
+ERROR 2025-11-09 01:06:17,709 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+ERROR 2025-11-09 01:06:17,709 log Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.10/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'f2234eb74941.ngrok-free.app'. You may need to add 'f2234eb74941.ngrok-free.app' to ALLOWED_HOSTS.
+WARNING 2025-11-09 01:06:17,711 basehttp "GET /favicon.ico HTTP/1.1" 400 62525
+WARNING 2025-11-09 01:06:17,711 basehttp "GET /favicon.ico HTTP/1.1" 400 62525
+INFO 2025-11-09 01:06:31,418 autoreload /app/core/settings.py changed, reloading.
+INFO 2025-11-09 01:06:31,418 autoreload /app/core/settings.py changed, reloading.
+INFO 2025-11-09 01:06:32,082 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 01:06:32,082 autoreload Watching for file changes with StatReloader
+WARNING 2025-11-09 01:06:35,425 log Not Found: /
+WARNING 2025-11-09 01:06:35,425 log Not Found: /
+WARNING 2025-11-09 01:06:35,428 basehttp "GET / HTTP/1.1" 404 2338
+WARNING 2025-11-09 01:06:35,428 basehttp "GET / HTTP/1.1" 404 2338
+WARNING 2025-11-09 01:06:35,631 log Not Found: /favicon.ico
+WARNING 2025-11-09 01:06:35,631 log Not Found: /favicon.ico
+WARNING 2025-11-09 01:06:35,637 basehttp "GET /favicon.ico HTTP/1.1" 404 2389
+WARNING 2025-11-09 01:06:35,637 basehttp "GET /favicon.ico HTTP/1.1" 404 2389
+WARNING 2025-11-09 01:07:38,239 log Method Not Allowed: /api/v1/analyze/
+WARNING 2025-11-09 01:07:38,239 log Method Not Allowed: /api/v1/analyze/
+WARNING 2025-11-09 01:07:38,244 basehttp "GET /api/v1/analyze/ HTTP/1.1" 405 40
+WARNING 2025-11-09 01:07:38,244 basehttp "GET /api/v1/analyze/ HTTP/1.1" 405 40
+WARNING 2025-11-09 01:07:58,707 log Method Not Allowed: /api/v1/analyze/
+WARNING 2025-11-09 01:07:58,707 log Method Not Allowed: /api/v1/analyze/
+WARNING 2025-11-09 01:07:58,712 basehttp "GET /api/v1/analyze/ HTTP/1.1" 405 40
+WARNING 2025-11-09 01:07:58,712 basehttp "GET /api/v1/analyze/ HTTP/1.1" 405 40
+WARNING 2025-11-09 02:13:03,626 log Bad Request: /api/v1/analyze/
+WARNING 2025-11-09 02:13:03,626 log Bad Request: /api/v1/analyze/
+WARNING 2025-11-09 02:13:03,631 basehttp "POST /api/v1/analyze/ HTTP/1.1" 400 29
+WARNING 2025-11-09 02:13:03,631 basehttp "POST /api/v1/analyze/ HTTP/1.1" 400 29
+INFO 2025-11-09 02:14:11,076 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 02:14:11,090 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-09 02:14:11,092 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 02:14:11,209 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 02:14:11,211 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 02:14:11,215 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-09 02:14:11,363 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 616001
+INFO 2025-11-09 02:14:11,363 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 616001
+WARNING 2025-11-09 02:17:55,966 log Bad Request: /api/v1/analyze/
+WARNING 2025-11-09 02:17:55,966 log Bad Request: /api/v1/analyze/
+WARNING 2025-11-09 02:17:55,971 basehttp "POST /api/v1/analyze/ HTTP/1.1" 400 29
+WARNING 2025-11-09 02:17:55,971 basehttp "POST /api/v1/analyze/ HTTP/1.1" 400 29
+INFO 2025-11-09 02:22:29,914 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 799113
+INFO 2025-11-09 02:22:29,914 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 799113
+INFO 2025-11-09 02:23:29,394 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 641265
+INFO 2025-11-09 02:23:29,394 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 641265
+INFO 2025-11-09 02:24:00,051 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 666505
+INFO 2025-11-09 02:24:00,051 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 666505
+INFO 2025-11-09 02:24:29,750 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 814133
+INFO 2025-11-09 02:24:29,750 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 814133
+INFO 2025-11-09 02:31:56,468 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 605105
+INFO 2025-11-09 02:31:56,468 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 605105
+INFO 2025-11-09 02:32:23,515 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 614313
+INFO 2025-11-09 02:32:23,515 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 614313
+WARNING 2025-11-09 02:33:10,984 log Bad Request: /api/v1/analyze/
+WARNING 2025-11-09 02:33:10,984 log Bad Request: /api/v1/analyze/
+WARNING 2025-11-09 02:33:10,994 basehttp "POST /api/v1/analyze/ HTTP/1.1" 400 29
+WARNING 2025-11-09 02:33:10,994 basehttp "POST /api/v1/analyze/ HTTP/1.1" 400 29
+INFO 2025-11-09 02:33:20,827 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 659149
+INFO 2025-11-09 02:33:20,827 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 659149
+INFO 2025-11-09 02:34:22,291 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 603909
+INFO 2025-11-09 02:34:22,291 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 603909
+INFO 2025-11-09 02:34:56,569 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 587641
+INFO 2025-11-09 02:34:56,569 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 587641
+INFO 2025-11-09 02:35:37,545 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 576277
+INFO 2025-11-09 02:35:37,545 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 576277
+INFO 2025-11-09 02:39:32,849 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 02:39:32,849 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 02:40:07,169 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 02:40:07,169 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 02:41:22,848 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 02:41:22,865 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-09 02:41:22,866 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 02:41:22,979 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 02:41:22,981 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 02:41:22,984 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-09 02:41:23,232 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 645701
+INFO 2025-11-09 02:41:23,232 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 645701
+INFO 2025-11-09 02:41:55,078 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 670301
+INFO 2025-11-09 02:41:55,078 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 670301
+INFO 2025-11-09 02:42:51,951 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 02:42:51,951 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 02:43:19,170 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 02:43:19,170 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 02:43:22,009 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+ERROR 2025-11-09 02:43:22,012 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Connect attempt returned error 111. Disconnecting.
+ERROR 2025-11-09 02:43:22,013 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+WARNING 2025-11-09 02:43:22,014 client_async No node available during check_version; sleeping 0.05 secs
+INFO 2025-11-09 02:43:22,065 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+ERROR 2025-11-09 02:43:22,067 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Connect attempt returned error 111. Disconnecting.
+ERROR 2025-11-09 02:43:22,068 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+WARNING 2025-11-09 02:43:22,070 client_async No node available during check_version; sleeping 0.10 secs
+INFO 2025-11-09 02:43:22,174 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+ERROR 2025-11-09 02:43:22,175 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Connect attempt returned error 111. Disconnecting.
+ERROR 2025-11-09 02:43:22,175 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+WARNING 2025-11-09 02:43:22,180 client_async No node available during check_version; sleeping 0.17 secs
+INFO 2025-11-09 02:43:22,357 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+ERROR 2025-11-09 02:43:22,358 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Connect attempt returned error 111. Disconnecting.
+ERROR 2025-11-09 02:43:22,360 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+WARNING 2025-11-09 02:43:22,361 client_async No node available during check_version; sleeping 0.41 secs
+INFO 2025-11-09 02:43:22,778 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+ERROR 2025-11-09 02:43:22,779 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Connect attempt returned error 111. Disconnecting.
+ERROR 2025-11-09 02:43:22,780 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+WARNING 2025-11-09 02:43:22,781 client_async No node available during check_version; sleeping 0.69 secs
+INFO 2025-11-09 02:43:23,477 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+ERROR 2025-11-09 02:43:23,478 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Connect attempt returned error 111. Disconnecting.
+ERROR 2025-11-09 02:43:23,484 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+WARNING 2025-11-09 02:43:23,485 client_async No node available during check_version; sleeping 0.52 secs
+ERROR 2025-11-09 02:43:24,014 log Service Unavailable: /api/v1/analyze/
+ERROR 2025-11-09 02:43:24,014 log Service Unavailable: /api/v1/analyze/
+ERROR 2025-11-09 02:43:24,017 basehttp "POST /api/v1/analyze/ HTTP/1.1" 503 38
+ERROR 2025-11-09 02:43:24,017 basehttp "POST /api/v1/analyze/ HTTP/1.1" 503 38
+INFO 2025-11-09 02:43:52,059 conn <BrokerConnection client_id=kafka-python-producer-2, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 02:43:52,072 conn <BrokerConnection client_id=kafka-python-producer-2, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-09 02:43:52,073 conn <BrokerConnection client_id=kafka-python-producer-2, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 02:43:52,182 conn <BrokerConnection client_id=kafka-python-producer-2, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 02:43:52,183 conn <BrokerConnection client_id=kafka-python-producer-2, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 02:43:52,185 conn <BrokerConnection client_id=kafka-python-producer-2, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-09 02:43:52,289 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 447765
+INFO 2025-11-09 02:43:52,289 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 447765
+INFO 2025-11-09 02:44:22,798 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 484845
+INFO 2025-11-09 02:44:22,798 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 484845
+INFO 2025-11-09 02:44:54,133 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 492205
+INFO 2025-11-09 02:44:54,133 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 492205
+INFO 2025-11-09 02:45:25,463 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 623985
+INFO 2025-11-09 02:45:25,463 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 623985
+INFO 2025-11-09 02:45:53,606 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 484253
+INFO 2025-11-09 02:45:53,606 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 484253
+INFO 2025-11-09 03:09:22,981 client_async Closing idle connection 1, last active 930773 ms ago
+INFO 2025-11-09 03:09:22,985 conn <BrokerConnection client_id=kafka-python-producer-2, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-09 03:09:22,990 conn <BrokerConnection client_id=kafka-python-producer-2, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 03:09:22,994 conn <BrokerConnection client_id=kafka-python-producer-2, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 03:20:02,458 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 10761
+INFO 2025-11-09 03:20:02,458 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 10761
+INFO 2025-11-09 03:21:22,460 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 647573
+INFO 2025-11-09 03:21:22,460 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 647573
+INFO 2025-11-09 03:21:51,823 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 677585
+INFO 2025-11-09 03:21:51,823 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 677585
+INFO 2025-11-09 03:22:23,221 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 594565
+INFO 2025-11-09 03:22:23,221 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 594565
+INFO 2025-11-09 03:22:54,177 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 574117
+INFO 2025-11-09 03:22:54,177 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 574117
+INFO 2025-11-09 03:23:24,542 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 580829
+INFO 2025-11-09 03:23:24,542 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 580829
+INFO 2025-11-09 03:23:53,905 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 599565
+INFO 2025-11-09 03:23:53,905 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 599565
+INFO 2025-11-09 03:29:40,821 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 03:29:40,821 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 03:30:26,306 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 03:30:26,318 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-09 03:30:26,319 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 03:30:26,431 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 03:30:26,433 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 03:30:26,438 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-09 03:30:26,466 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 10761
+INFO 2025-11-09 03:30:26,466 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 10761
+INFO 2025-11-09 03:31:35,494 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 597017
+INFO 2025-11-09 03:31:35,494 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 597017
+INFO 2025-11-09 03:32:04,186 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 669685
+INFO 2025-11-09 03:32:04,186 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 669685
+INFO 2025-11-09 03:33:43,111 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 717613
+INFO 2025-11-09 03:33:43,111 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 717613
+INFO 2025-11-09 03:34:09,920 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 631717
+INFO 2025-11-09 03:34:09,920 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 631717
+INFO 2025-11-09 03:35:56,148 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 827241
+INFO 2025-11-09 03:35:56,148 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 827241
+INFO 2025-11-09 03:36:26,175 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 761593
+INFO 2025-11-09 03:36:26,175 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 761593
+INFO 2025-11-09 03:51:18,965 client_async Closing idle connection 1, last active 652499 ms ago
+INFO 2025-11-09 03:51:18,966 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-09 03:51:18,972 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 03:51:18,975 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 03:51:19,062 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 632497
+INFO 2025-11-09 03:51:19,062 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 632497
+INFO 2025-11-09 03:52:26,184 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 751477
+INFO 2025-11-09 03:52:26,184 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 751477
+INFO 2025-11-09 03:52:43,150 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 750485
+INFO 2025-11-09 03:52:43,150 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 750485
+INFO 2025-11-09 03:52:46,790 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 722809
+INFO 2025-11-09 03:52:46,790 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 722809
+INFO 2025-11-09 03:52:55,820 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 693573
+INFO 2025-11-09 03:52:55,820 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 693573
+INFO 2025-11-09 03:53:06,587 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 872041
+INFO 2025-11-09 03:53:06,587 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 872041
+INFO 2025-11-09 03:53:17,148 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 651713
+INFO 2025-11-09 03:53:17,148 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 651713
+INFO 2025-11-09 03:53:27,155 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 674933
+INFO 2025-11-09 03:53:27,155 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 674933
+INFO 2025-11-09 03:55:11,045 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 03:55:11,045 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 03:55:41,353 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 03:55:41,353 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 03:56:36,547 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 03:56:36,561 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-09 03:56:36,565 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 03:56:36,676 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 03:56:36,678 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 03:56:36,680 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-09 03:56:36,828 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 698973
+INFO 2025-11-09 03:56:36,828 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 698973
+INFO 2025-11-09 03:57:17,448 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 661349
+INFO 2025-11-09 03:57:17,448 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 661349
+INFO 2025-11-09 04:00:04,659 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 04:00:04,659 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 04:00:56,749 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 04:00:56,766 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-09 04:00:56,767 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 04:00:56,878 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 04:00:56,879 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 04:00:56,881 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-09 04:00:57,040 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 716105
+INFO 2025-11-09 04:00:57,040 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 716105
+INFO 2025-11-09 04:06:43,446 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 748589
+INFO 2025-11-09 04:06:43,446 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 748589
+INFO 2025-11-09 04:07:18,926 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 524029
+INFO 2025-11-09 04:07:18,926 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 524029
+INFO 2025-11-09 04:07:25,323 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 529337
+INFO 2025-11-09 04:07:25,323 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 529337
+INFO 2025-11-09 04:08:00,224 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 797661
+INFO 2025-11-09 04:08:00,224 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 797661
+INFO 2025-11-09 04:12:44,220 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 769809
+INFO 2025-11-09 04:12:44,220 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 769809
+INFO 2025-11-09 04:13:02,103 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 768413
+INFO 2025-11-09 04:13:02,103 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 768413
+INFO 2025-11-09 04:13:40,060 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 761753
+INFO 2025-11-09 04:13:40,060 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 761753
+INFO 2025-11-09 04:14:17,837 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 769221
+INFO 2025-11-09 04:14:17,837 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 769221
+INFO 2025-11-09 04:14:39,414 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 753185
+INFO 2025-11-09 04:14:39,414 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 753185
+INFO 2025-11-09 05:19:22,359 client_async Closing idle connection 1, last active 3803819 ms ago
+INFO 2025-11-09 05:19:22,360 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-09 05:19:22,365 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 05:19:22,367 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 05:39:12,005 autoreload /app/core/views.py changed, reloading.
+INFO 2025-11-09 05:39:12,005 autoreload /app/core/views.py changed, reloading.
+INFO 2025-11-09 05:39:12,654 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 05:39:12,654 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 05:39:41,655 autoreload /app/core/views.py changed, reloading.
+INFO 2025-11-09 05:39:41,655 autoreload /app/core/views.py changed, reloading.
+INFO 2025-11-09 05:39:42,624 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 05:39:42,624 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 05:40:16,731 autoreload /app/core/views.py changed, reloading.
+INFO 2025-11-09 05:40:16,731 autoreload /app/core/views.py changed, reloading.
+INFO 2025-11-09 05:40:17,388 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 05:40:17,388 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 05:40:18,891 autoreload /app/core/views.py changed, reloading.
+INFO 2025-11-09 05:40:18,891 autoreload /app/core/views.py changed, reloading.
+INFO 2025-11-09 05:40:19,529 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 05:40:19,529 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 06:03:28,432 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 06:03:28,432 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 06:11:18,771 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 06:11:18,771 autoreload Watching for file changes with StatReloader
+WARNING 2025-11-09 06:12:13,522 log Bad Request: /api/v1/analyze/
+WARNING 2025-11-09 06:12:13,522 log Bad Request: /api/v1/analyze/
+WARNING 2025-11-09 06:12:13,527 basehttp "POST /api/v1/analyze/ HTTP/1.1" 400 35
+WARNING 2025-11-09 06:12:13,527 basehttp "POST /api/v1/analyze/ HTTP/1.1" 400 35
+WARNING 2025-11-09 06:12:50,396 log Bad Request: /api/v1/analyze/
+WARNING 2025-11-09 06:12:50,396 log Bad Request: /api/v1/analyze/
+WARNING 2025-11-09 06:12:50,416 basehttp "POST /api/v1/analyze/ HTTP/1.1" 400 35
+WARNING 2025-11-09 06:12:50,416 basehttp "POST /api/v1/analyze/ HTTP/1.1" 400 35
+INFO 2025-11-09 06:14:21,679 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 06:14:21,699 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-09 06:14:21,701 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 06:14:21,816 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 06:14:21,819 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 06:14:21,822 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-09 06:14:21,978 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 668235
+INFO 2025-11-09 06:14:21,978 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 668235
+INFO 2025-11-09 06:14:52,659 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 691607
+INFO 2025-11-09 06:14:52,659 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 691607
+INFO 2025-11-09 06:19:46,030 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 539135
+INFO 2025-11-09 06:19:46,030 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 539135
+INFO 2025-11-09 06:20:55,668 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 06:20:55,668 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 06:21:20,611 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 06:21:20,629 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-09 06:21:20,630 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 06:21:20,740 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 06:21:20,743 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 06:21:20,745 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-09 06:21:20,878 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 581231
+INFO 2025-11-09 06:21:20,878 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 581231
+INFO 2025-11-09 06:23:04,234 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 06:23:04,234 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 06:23:49,123 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 06:23:49,137 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.21.0.3', 9092)]>: Broker version identified as 2.6
+INFO 2025-11-09 06:23:49,138 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 06:23:49,248 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to kafka:9092 [('172.21.0.3', 9092) IPv4]
+INFO 2025-11-09 06:23:49,250 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
+INFO 2025-11-09 06:23:49,254 conn <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
+INFO 2025-11-09 06:23:49,391 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 600351
+INFO 2025-11-09 06:23:49,391 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 600351
+INFO 2025-11-09 06:24:19,289 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 581267
+INFO 2025-11-09 06:24:19,289 basehttp "POST /api/v1/analyze/ HTTP/1.1" 200 581267
+INFO 2025-11-09 06:25:58,308 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 06:25:58,308 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 06:26:27,100 autoreload Watching for file changes with StatReloader
+INFO 2025-11-09 06:26:27,100 autoreload Watching for file changes with StatReloader

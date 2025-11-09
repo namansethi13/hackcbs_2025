@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:7.4.0
@@ -17,14 +15,39 @@ services:
       - zookeeper
     ports:
       - "9092:9092"
+      - "29092:29092"
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      # This is crucial: allows access both from Django container and your local machine
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,PLAINTEXT_HOST://0.0.0.0:29092
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  # Security Image Consumer Service
+  security-consumer:
+    build:
+      context: ./agentic-backend
+      dockerfile: Dockerfile.consumer
+    container_name: security-consumer
+    depends_on:
+      - kafka
+    environment:
+      - KAFKA_BROKER=kafka:9092
+      - KAFKA_TOPIC=images
+      - KAFKA_GROUP_ID=security-monitor-group
+      - SAVE_IMAGES=true
+      - IMAGE_DIR=/app/images
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - LLM_MODEL=gemini-2.0-flash-exp
+    volumes:
+      # Only mount the images directory, not the Python files
+      - ./received_images:/app/images
+      # Remove these lines if agent.py and consumer_service.py don't exist:
+      # - ./agent.py:/app/agent.py
+      # - ./consumer_service.py:/app/consumer_service.py
+    restart: unless-stopped
 
   django:
     build:
