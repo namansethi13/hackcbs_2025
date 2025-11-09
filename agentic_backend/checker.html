@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Upload image to Kafka API</title>
+  <style>
+    body { font-family: system-ui, Arial; max-width:640px; margin:40px auto; }
+    .btn { padding:8px 12px; border-radius:6px; cursor:pointer; }
+    #status { margin-top:12px; white-space:pre-wrap; }
+    label { display:block; margin-top:10px; }
+  </style>
+</head>
+<body>
+  <h2>Send image to /analyze-image/</h2>
+
+  <form id="uploadForm">
+    <label>
+      Choose image:
+      <input type="file" id="imageInput" name="image" accept="image/*" />
+    </label>
+
+    <label>
+      Location:
+      <input type="text" id="locationInput" name="location" placeholder="e.g. Main Gate" />
+    </label>
+
+    <br/>
+    <button type="submit" class="btn">Upload</button>
+  </form>
+
+  <progress id="progress" value="0" max="100" style="display:none; width:100%"></progress>
+  <div id="status"></div>
+
+  <script>
+    const form = document.getElementById('uploadForm');
+    const fileInput = document.getElementById('imageInput');
+    const locationInput = document.getElementById('locationInput');
+    const status = document.getElementById('status');
+    const progress = document.getElementById('progress');
+
+    // Update this URL as needed
+    const API_URL = 'http://localhost:8000/api/v1/analyze/';
+
+    // helper to get CSRF token (if using Django's CSRF cookie)
+    function getCookie(name) {
+      const v = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+      return v ? v.pop() : '';
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      status.textContent = '';
+      const file = fileInput.files[0];
+      const location = locationInput.value.trim();
+
+      if (!file) {
+        status.textContent = 'Pick an image first.';
+        return;
+      }
+
+      const fd = new FormData();
+      fd.append('image', file);
+      fd.append('location', location || 'Unknown Location');
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', API_URL, true);
+
+      // Optional CSRF header for Django
+      const csrftoken = getCookie('csrftoken');
+      if (csrftoken) xhr.setRequestHeader('X-CSRFToken', csrftoken);
+
+      xhr.upload.onprogress = (ev) => {
+        if (ev.lengthComputable) {
+          progress.style.display = 'block';
+          progress.value = Math.round((ev.loaded / ev.total) * 100);
+        }
+      };
+
+      xhr.onload = () => {
+        progress.style.display = 'none';
+        if (xhr.status === 200 || xhr.status === 201) {
+          status.textContent = '✅ Uploaded — server response: ' + xhr.responseText;
+        } else if (xhr.status === 503) {
+          status.textContent = '⚠️ Kafka broker not available (503). Try again later.';
+        } else if (xhr.status === 400) {
+          status.textContent = '❌ Bad request — maybe no image was sent. Response: ' + xhr.responseText;
+        } else {
+          status.textContent = `❌ Error ${xhr.status}: ` + xhr.responseText;
+        }
+      };
+
+      xhr.onerror = () => {
+        progress.style.display = 'none';
+        status.textContent = 'Network error — could not reach the server.';
+      };
+
+      xhr.send(fd);
+      status.textContent = 'Uploading…';
+    });
+  </script>
+</body>
+</html>

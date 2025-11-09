@@ -1,0 +1,37 @@
+# Dockerfile.consumer
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    libffi-dev \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements first for better caching
+COPY requirements_consumer.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements_consumer.txt
+
+# Copy application files
+COPY core/ .
+COPY core/consumer_service.py .
+
+# Create directory for images
+RUN mkdir -p /app/images /app/logs
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+    CMD python -c "from kafka import KafkaConsumer; print('ok')" || exit 1
+
+# Run the consumer
+CMD ["python", "-u", "consumer_service.py"]
